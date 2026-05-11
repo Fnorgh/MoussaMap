@@ -4,18 +4,16 @@ MoussaMap is an R package for building interactive heatmaps from an expression m
 
 ## Install from GitHub
 
-Replace `yourname` with your GitHub username or organization name:
-
 ```r
 install.packages("pak")
-pak::pkg_install("yourname/MoussaMap")
+pak::pkg_install("Fnorgh/MoussaMap")
 ```
 
 Or with `remotes`:
 
 ```r
 install.packages("remotes")
-remotes::install_github("yourname/MoussaMap")
+remotes::install_github("Fnorgh/MoussaMap")
 ```
 
 ## Use the package

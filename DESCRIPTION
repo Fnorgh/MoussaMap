@@ -2,7 +2,7 @@ Package: MoussaMap
 Type: Package
 Title: MoussaMap Interactive Heatmap Generation
 Version: 0.0.0.9000
-Authors@R: person("Nicholas", "Louque", role = c("aut", "cre"))
+Authors@R: person("Nicholas", "Louque", email = "102239083+Fnorgh@users.noreply.github.com", role = c("aut", "cre"))
 Description: Create interactive heatmaps from an expression matrix and cell metadata.
 License: GPL-3
 Encoding: UTF-8
