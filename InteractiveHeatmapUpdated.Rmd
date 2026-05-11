@@ -111,7 +111,7 @@ output: html_document
 #   - Otherwise: dendrogram="both" and both dendrograms shown
 #
 # PARAMETERS
-#   create_heatmap(
+#   MoussaMap(
 #     expression_matrix = "DS1.csv",     # REQUIRED path to expression CSV
 #     metadata          = "hierarchy.csv",# REQUIRED path to metadata CSV
 #     gene_selection    = NULL,          # OPTIONAL path to gene list CSV
@@ -130,7 +130,7 @@ output: html_document
 #     - $plot  : plotly/heatmaply object (interactive; render in RMarkdown/HTML)
 #     - $error : (only on failure) error string
 #   Typical usage:
-#     result <- create_heatmap(...)
+#     result <- MoussaMap(...)
 #     result$plot
 #
 #
@@ -178,7 +178,7 @@ select_variable_features_after_averaging <- function(expr_matrix,
 }
 
 # Main heatmap creation function
-create_heatmap <- function(expression_matrix,
+MoussaMap <- function(expression_matrix,
                           metadata,
                           gene_selection = NULL,
                           cell_selection = NULL,
@@ -603,7 +603,7 @@ create_heatmap <- function(expression_matrix,
 
 ```{r}
 # Test with Suryaveer's files
-result <- create_heatmap(
+result <- MoussaMap(
   expression_matrix = "expr_matrix_liver.csv",
   metadata = "cell_id_class_subclass_cluster.csv",
   normalization = "none"
@@ -612,7 +612,7 @@ result$plot
 ```
 ```{r}
 # Log2 transform plus scaling
-result_log_scale <- create_heatmap(
+result_log_scale <- MoussaMap(
   expression_matrix = "DS1.csv",
   metadata = "hierarchy10.csv",
   normalization = "log2_scale",
@@ -622,7 +622,7 @@ result_log_scale$plot
 ```
 ```{r}
 # Max normalization
-result_max <- create_heatmap(
+result_max <- MoussaMap(
   expression_matrix = "DS1.csv",
   metadata = "hierarchy10.csv",
  
@@ -631,7 +631,7 @@ result_max$plot
 ```
 ```{r}
 # Z-score scaling
-result_scale <- create_heatmap(
+result_scale <- MoussaMap(
   expression_matrix = "DS1.csv",
   metadata = "hierarchy10.csv",
   normalization = "scale",
@@ -641,7 +641,7 @@ result_scale$plot
 ```
 ```{r}
 # Log2 transform only
-result_log <- create_heatmap(
+result_log <- MoussaMap(
   expression_matrix = "DS1.csv",
   metadata = "hierarchy10.csv",
   normalization = "log2"

@@ -23,7 +23,7 @@ remotes::install_github("yourname/MoussaMap")
 ```r
 library(MoussaMap)
 
-result <- create_heatmap(
+result <- MoussaMap(
 	expression_matrix = "expr_matrix.csv",
 	metadata = "metadata.csv",
 	normalization = "none"

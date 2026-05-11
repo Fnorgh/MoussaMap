@@ -1,6 +1,6 @@
 #' Select variable features after averaging
 #'
-#' Internal helper used by `create_heatmap()` when `top_var_features` is set.
+#' Internal helper used by `MoussaMap()` when `top_var_features` is set.
 #'
 #' @keywords internal
 select_variable_features_after_averaging <- function(expr_matrix,
@@ -69,7 +69,7 @@ read_optional_group_level <- function(path) {
 #'
 #' @return A list with `plot` and, on failure, `error`.
 #' @export
-create_heatmap <- function(expression_matrix,
+MoussaMap <- function(expression_matrix,
                           metadata,
                           gene_selection = NULL,
                           cell_selection = NULL,
